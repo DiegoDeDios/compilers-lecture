@@ -11,4 +11,8 @@ statement: NAME '=' expression
 expression: expression '+' NUMBER   { $$ = $1 + $3;}
  | expression '-' NUMBER            { $$ = $1 - $3;}
  | NUMBER                           {$$ = $1;}
+ | expression '*' NUMBER	    {$$ = $1 * $3;}
+ | expression '/' NUMBER	    {$$ = $1 / $3;}
+ | expression '&' NUMBER	    {$$ = $1 & $3;}
+ | expression '|' NUMBER	    {$$ = $1 | $3;}
  ;
